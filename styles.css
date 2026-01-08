@@ -40,7 +40,12 @@ a {
   display: none;
 }
 
-
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+}
 
 .skill-list {
   padding: 10px;
@@ -56,4 +61,20 @@ a {
   border: solid 1px #ffffff69;
   border-radius: 50px;
   padding: 1px 10px ;
+}
+
+.demo-scroll {
+  animation-name: scroll-up;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes scroll-up {
+  from {
+    transform: translateY(-20%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
