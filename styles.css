@@ -3,8 +3,13 @@ body {
   background-image: linear-gradient(0deg, #ffffff69 1px, transparent 1px),
   linear-gradient(90deg, #ffffff69 1px, transparent 1px);
   background-size: 35px 35px;
-  font-family: monospace;
+  font-family:  "JetBrains Mono", monospace;
   overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+
 }
 
 h1{
@@ -63,18 +68,32 @@ a {
   padding: 1px 10px ;
 }
 
-.demo-scroll {
-  animation-name: scroll-up;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
+.reveal {
+  opacity: 0;
+  transform: translateY(20%);
+  animation: scroll-up 0.6s forwards;
+  animation-delay: var(--delay);
+}
+
+.bigger{
+  letter-spacing: 0;
+  position: relative;
+  font-size: large;
+  transition: all 0.3s linear(0, 0.1, 0.25, 0.5, 0.68, 0.8, 0.88, 0.94, 0.98, 0.995, 1);
+}
+.bigger:hover{
+  letter-spacing: 0.2ch;
+  font-size: 1.5rem;
+  cursor: zoom-in;
 }
 
 @keyframes scroll-up {
   from {
-    transform: translateY(-20%);
+    transform: translateY(10%);
+    opacity: 0;
   }
   to {
     transform: translateY(0);
+    opacity: 1;
   }
 }

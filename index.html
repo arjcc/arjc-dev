@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Developer | Arjun M Liji</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/png" href="assets/face.webp" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -14,7 +20,12 @@
       href="/"
       class="cursor-default flex items-center gap-2 no-underline absolute flex flex-row items-center gap-3 bg-[#1119] rounded-[25px] px-6 py-2 top-4 left-4 shadow-2xl border border-[#aaa] hover:bg-[#111] transition-all duration-300"
     >
-      <img src="assets/face.webp" alt="achu" class="h-10 rounded-full m-0 cursor-pointer" onclick="window.open('https://www.arjc.me')"/>
+      <img
+        src="assets/face.webp"
+        alt="achu"
+        class="h-10 rounded-full m-0 cursor-pointer"
+        onclick="window.open('https://www.arjc.me')"
+      />
       <span class="text-white text-2xl font-bold">Dev</span>
     </a>
 
@@ -24,18 +35,30 @@
     >
       <!-- right side bar -->
       <div
-        class="hidden lg:flex flex-col w-[34vw] h-screen bg-[#0009] items-left p-10 overflow-y-scroll sbar-hide border-dashed border-l-[2px] border-gray-300"
+        class="hidden lg:flex flex-col w-[34vw] h-screen bg-[#0009] items-left px-10 overflow-y-scroll sbar-hide border-dashed border-l-[2px] border-gray-300"
       >
-        <!-- Hero -->
-         <div class="text-[5em] lg:text-[7em] wrap-normal mb-10">
-          ARJUN LIJI 
-          DEV PORT
-          FOLIO
-         </div>
-        <!-- profile -->
-        <h1>About me ~></h1>
         <div
-          class="flex items-center justify-between bg-black my-5 xl:flex-row flex-col-reverse"
+          class="absolute rotate-90 text-[1em] -right-7 top-[50%] text-gray-500"
+        >
+          scroll -&gt;
+        </div>
+        <!-- Hero -->
+        <div class="text-[3em] lg:text-[5em] wrap-normal mb-10">
+          <span class="reveal font-bold" style="--delay: 200ms">
+            ARJUN LIJI
+          </span>
+          <span class="reveal text-gray-400" style="--delay: 300ms"
+            >&lt;DEV&gt;</span
+          >
+          <span class="reveal text-gray-400" style="--delay: 400ms"
+            >PORTFO- LIO</span
+          >
+        </div>
+        <!-- profile -->
+        <h1 class="reveal" style="--delay: 1300ms;">About me ~~></h1>
+        <div
+          class="flex items-center justify-between bg-black my-5 xl:flex-row flex-col-reverse reveal"
+          style="--delay: 1200ms"
         >
           <h1 class="m-5 text-3xl font-bold max-w-[5em]">
             Arjun M Liji
@@ -93,29 +116,29 @@
           <ul class="skill-list">
             <b>Languages:</b>
             <li>
-              <span class="text-blue-400">Ts/Javascript</span>
-              <span class="text-orange-500">HTML5</span>
-              <span class="text-blue-300">CSS5</span>
-              <span class="text-yellow-500">Python</span>
-              <span class="text-gray-100">C</span>
+              <span class="bigger text-blue-400">Ts/Javascript</span>
+              <span class="bigger text-orange-500">HTML5</span>
+              <span class="bigger text-blue-300">CSS3</span>
+              <span class="bigger text-yellow-500">Python</span>
+              <span class="bigger text-gray-100">C</span>
             </li>
             <b>Backend:</b>
             <li>
-              <span class="text-blue-400">MySQL</span>
-              <span class="text-green-500">MongoDB</span>
-              <span class="text-gray-100">Expressjs</span>
+              <span class="bigger text-blue-400">MySQL</span>
+              <span class="bigger text-green-500">MongoDB</span>
+              <span class="bigger text-gray-100">Expressjs</span>
             </li>
             <b>Frontend:</b>
             <li>
-              <span class="text-blue-300">React</span>
-              <span class="text-cyan-400">Tailwind</span>
-              <span class="text-blue-700">Flutter</span>
+              <span class="bigger text-blue-300">React</span>
+              <span class="bigger text-cyan-400">Tailwind</span>
+              <span class="bigger text-blue-700">Flutter</span>
             </li>
             <b>Tools & Platforms:</b>
             <li>
-              <span class="text-red-400">Git</span>
-              <span class="text-cyan-500">Docker</span>
-              <span class="text-pink-400">Figma</span>
+              <span class="bigger text-red-400">Git</span>
+              <span class="bigger text-cyan-500">Docker</span>
+              <span class="bigger text-pink-400">Figma</span>
             </li>
           </ul>
         </div>
