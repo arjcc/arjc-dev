@@ -12,6 +12,16 @@ body {
 
 }
 
+.font-jetbrains {
+  font-family: "JetBrains Mono", monospace;
+}
+.font-manjari {
+  font-family: "Manjari", sans-serif;
+}
+.font-cursive {
+  font-family: "Edu NSW ACT Cursive", cursive;
+}
+
 h1{
   font-size: 32px !important;
   font-weight: bold;
@@ -81,9 +91,5 @@ a {
 .bigger{
   position: relative;
   font-size: large;
-  transition: opacity 0.3s ease;
-}
-.bigger:hover{
-  opacity: 0.7;
-  cursor: pointer;
+  transition: all 0.3s ease;
 }
