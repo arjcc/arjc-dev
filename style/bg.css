@@ -1,0 +1,80 @@
+:root {
+  --iso-i: #1c1c1c;
+}
+
+.Isometric {
+  background-image: linear-gradient(
+      30deg,
+      var(--iso-i) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      var(--iso-i) 87.5%,
+      var(--iso-i)
+    ),
+    linear-gradient(
+      150deg,
+      var(--iso-i) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      var(--iso-i) 87.5%,
+      var(--iso-i)
+    ),
+    linear-gradient(
+      30deg,
+      var(--iso-i) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      var(--iso-i) 87.5%,
+      var(--iso-i)
+    ),
+    linear-gradient(
+      150deg,
+      var(--iso-i) 12%,
+      transparent 12.5%,
+      transparent 87%,
+      var(--iso-i) 87.5%,
+      var(--iso-i)
+    ),
+    linear-gradient(
+      60deg,
+      #000 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #000 75%,
+      #000
+    ),
+    linear-gradient(
+      60deg,
+      #000 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #000 75%,
+      #000
+    );
+  background-size: 40px 70px;
+  background-position: 0 0, 0 0, 20px 35px, 20px 35px, 0 0, 20px 35px;
+}
+
+.cross {
+  opacity: 0.8;
+  background: radial-gradient(
+      circle,
+      transparent 20%,
+      #e5e5f7 20%,
+      #e5e5f7 80%,
+      transparent 80%,
+      transparent
+    ),
+    radial-gradient(
+        circle,
+        transparent 20%,
+        #e5e5f7 20%,
+        #e5e5f7 80%,
+        transparent 80%,
+        transparent
+      )
+      25px 25px,
+    linear-gradient(#444cf7 2px, transparent 2px) 0 -1px,
+    linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
+  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+}

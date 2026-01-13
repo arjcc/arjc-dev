@@ -3,98 +3,213 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Kalkulator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Malayalam Calculator</title>
+    <link rel="stylesheet" href="../style/bg.css" />
+    <style>
+      body {
+        font-family: "JetBrains Mono", monospace;
+      }
+    </style>
   </head>
-  <body>
-    <div>
-      <h1 style="letter-spacing: 0.4ch">Malaya Lipi calculator</h1>
-      <p style="color: #8a8a8a">
+  <body
+    class="Isometric bg-[#111] text-white box-border min-h-screen w-screen m-0 p-0 font-mono flex flex-col-reverse md:flex-row justify-evenly items-center text-center gap-[2vh] md:gap-[1vw] py-[5vh] px-[5vw] md:p-0"
+  >
+    <a
+      href="/"
+      class="cursor-default flex items-center gap-2 no-underline absolute flex-row gap-3 bg-[#1119] rounded-[25px] px-6 py-2 top-4 left-4 shadow-2xl border border-[#aaa] hover:bg-[#111] transition-all duration-300"
+    >
+      <img
+        src="../assets/face.webp"
+        alt="achu"
+        class="h-10 rounded-full m-0 cursor-pointer"
+        onclick="window.open('https://www.arjc.me')"
+      />
+      <span class="text-white text-2xl font-bold">Dev</span>
+    </a>
+    <div class="max-w-[500px]">
+      <h1 class="tracking-[0.4ch] text-2xl underline decoration-wavy">
+        Malaya Lipi calculator
+      </h1>
+      <p class="text-[#8a8a8a] my-5">
         This is a special kind of calulator which uses malayalam numerals, which
         is a numeral system used in an ancient version of Malayalam language,
         spoken in Kerala (Keralam) a state in India. They are part of the
         Brahmic family of scripts and have their own unique symbols for the base
         10 system digits.
       </p>
-      <br />
-      <table>
+      <table
+        class="w-[200px] bg-black mx-auto border-collapse text-white border-2 border-white"
+      >
         <tr>
-          <th>Malayalam</th>
-          <th>Arabic</th>
+          <th class="border-2 border-white">Malayalam</th>
+          <th class="border-2 border-white">Arabic</th>
         </tr>
         <tr>
-          <td>൦</td>
-          <td>0</td>
+          <td class="border-2 border-white">൦</td>
+          <td class="border-2 border-white">0</td>
         </tr>
         <tr>
-          <td>൧</td>
-          <td>1</td>
+          <td class="border-2 border-white">൧</td>
+          <td class="border-2 border-white">1</td>
         </tr>
         <tr>
-          <td>൨</td>
-          <td>2</td>
+          <td class="border-2 border-white">൨</td>
+          <td class="border-2 border-white">2</td>
         </tr>
         <tr>
-          <td>൩</td>
-          <td>3</td>
+          <td class="border-2 border-white">൩</td>
+          <td class="border-2 border-white">3</td>
         </tr>
         <tr>
-          <td>൪</td>
-          <td>4</td>
+          <td class="border-2 border-white">൪</td>
+          <td class="border-2 border-white">4</td>
         </tr>
         <tr>
-          <td>൫</td>
-          <td>5</td>
+          <td class="border-2 border-white">൫</td>
+          <td class="border-2 border-white">5</td>
         </tr>
         <tr>
-          <td>൬</td>
-          <td>6</td>
+          <td class="border-2 border-white">൬</td>
+          <td class="border-2 border-white">6</td>
         </tr>
         <tr>
-          <td>൭</td>
-          <td>7</td>
+          <td class="border-2 border-white">൭</td>
+          <td class="border-2 border-white">7</td>
         </tr>
         <tr>
-          <td>൮</td>
-          <td>8</td>
+          <td class="border-2 border-white">൮</td>
+          <td class="border-2 border-white">8</td>
         </tr>
         <tr>
-          <td>൯</td>
-          <td>9</td>
+          <td class="border-2 border-white">൯</td>
+          <td class="border-2 border-white">9</td>
         </tr>
       </table>
       <br />
-      <a href="https://en.wikipedia.org/wiki/Malayalam_numerals">[Learn more]</a>
-      <br> <br> <br>
-      Made by Arjun M Liji 
-      <a href="https://github.com/arjc" style="color: #8a8a8a;">(GH)</a>
-      <a href="https://linkedin.com/in/arjc" style="color: #7ba9ff;">(IN)</a>
+      <a
+        href="https://en.wikipedia.org/wiki/Malayalam_numerals"
+        class="text-white no-underline tracking-[0.2ch]"
+        >[Learn more]</a
+      >
+      <br />
+      <br />
+      <br />
+      Made by Arjun M Liji
+      <a
+        href="https://github.com/arjc"
+        class="text-[#8a8a8a] no-underline tracking-[0.2ch]"
+        >(GH)</a
+      >
+      <a
+        href="https://linkedin.com/in/arjc"
+        class="text-[#7ba9ff] no-underline tracking-[0.2ch]"
+        >(IN)</a
+      >
     </div>
-    <div>
-      <div class="display">
-        <span></span>
-        <span></span>
+    <div class="max-w-[500px]">
+      <div
+        class="display text-black w-[300px] h-[100px] mx-auto rounded-[10px] flex flex-col justify-between items-end p-[10px] bg-[#e0e0e09e]"
+      >
+        <span
+          class="text-[1.5em] w-full text-right overflow-hidden text-ellipsis whitespace-nowrap direction-rtl"
+          dir="rtl"
+        ></span>
+        <span
+          class="text-[1.5em] w-full text-right overflow-hidden text-ellipsis whitespace-nowrap direction-rtl"
+          dir="rtl"
+        ></span>
       </div>
-      <div class="ctrls-container">
-        <span onclick="ezh()">൭</span>
-        <span onclick="ett()">൮</span>
-        <span onclick="omb()">൯</span>
-        <span onclick="add()">+</span>
+      <div class="grid grid-cols-4 gap-[10px] w-[300px] mx-auto my-5">
+        <span
+          onclick="ezh()"
+          class="bg-black text-white p-5 text-center rounded-[5px] cursor-pointer select-none text-[1.2em]"
+          >൭</span
+        >
+        <span
+          onclick="ett()"
+          class="bg-black text-white p-5 text-center rounded-[5px] cursor-pointer select-none text-[1.2em]"
+          >൮</span
+        >
+        <span
+          onclick="omb()"
+          class="bg-black text-white p-5 text-center rounded-[5px] cursor-pointer select-none text-[1.2em]"
+          >൯</span
+        >
+        <span
+          onclick="add()"
+          class="bg-black text-white p-5 text-center rounded-[5px] cursor-pointer select-none text-[1.2em]"
+          >+</span
+        >
 
-        <span onclick="nal()">൪</span>
-        <span onclick="anj()">൫</span>
-        <span onclick="arr()">൬</span>
-        <span onclick="sub()">−</span>
+        <span
+          onclick="nal()"
+          class="bg-black text-white p-5 text-center rounded-[5px] cursor-pointer select-none text-[1.2em]"
+          >൪</span
+        >
+        <span
+          onclick="anj()"
+          class="bg-black text-white p-5 text-center rounded-[5px] cursor-pointer select-none text-[1.2em]"
+          >൫</span
+        >
+        <span
+          onclick="arr()"
+          class="bg-black text-white p-5 text-center rounded-[5px] cursor-pointer select-none text-[1.2em]"
+          >൬</span
+        >
+        <span
+          onclick="sub()"
+          class="bg-black text-white p-5 text-center rounded-[5px] cursor-pointer select-none text-[1.2em]"
+          >−</span
+        >
 
-        <span onclick="onn()">൧</span>
-        <span onclick="rnd()">൨</span>
-        <span onclick="mun()">൩</span>
-        <span onclick="div()">÷</span>
+        <span
+          onclick="onn()"
+          class="bg-black text-white p-5 text-center rounded-[5px] cursor-pointer select-none text-[1.2em]"
+          >൧</span
+        >
+        <span
+          onclick="rnd()"
+          class="bg-black text-white p-5 text-center rounded-[5px] cursor-pointer select-none text-[1.2em]"
+          >൨</span
+        >
+        <span
+          onclick="mun()"
+          class="bg-black text-white p-5 text-center rounded-[5px] cursor-pointer select-none text-[1.2em]"
+          >൩</span
+        >
+        <span
+          onclick="div()"
+          class="bg-black text-white p-5 text-center rounded-[5px] cursor-pointer select-none text-[1.2em]"
+          >÷</span
+        >
 
-        <span onclick="clr()">ക്ലി</span>
-        <span onclick="puj()">൦</span>
-        <span onclick="mul()">×</span>
-        <span onclick="sam()">=</span>
+        <span
+          onclick="clr()"
+          class="bg-black text-white p-5 text-center rounded-[5px] cursor-pointer select-none text-[1.2em]"
+          >ക്ലി</span
+        >
+        <span
+          onclick="puj()"
+          class="bg-black text-white p-5 text-center rounded-[5px] cursor-pointer select-none text-[1.2em]"
+          >൦</span
+        >
+        <span
+          onclick="mul()"
+          class="bg-black text-white p-5 text-center rounded-[5px] cursor-pointer select-none text-[1.2em]"
+          >×</span
+        >
+        <span
+          onclick="sam()"
+          class="bg-black text-white p-5 text-center rounded-[5px] cursor-pointer select-none text-[1.2em]"
+          >=</span
+        >
       </div>
     </div>
     <script src="calculator.js"></script>

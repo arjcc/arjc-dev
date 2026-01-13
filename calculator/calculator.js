@@ -1,71 +1,53 @@
-const englishToMalayalamNumbers = {
-    '0': '൦',
-    '1': '൧',
-    '2': '൨',
-    '3': '൩',
-    '4': '൪',
-    '5': '൫',
-    '6': '൬',
-    '7': '൭',
-    '8': '൮',
-    '9': '൯'
-};
+const m = { '0': '൦', '1': '൧', '2': '൨', '3': '൩', '4': '൪', '5': '൫', '6': '൬', '7': '൭', '8': '൮', '9': '൯' };
+let e = '', r = '';
 
-let currentExpression = '';
-let currentResult = '';
 
-function convertToMalayalam(str) {
-    return String(str).replace(/[0-9]/g, digit => englishToMalayalamNumbers[digit]);
-}
 
-function updateDisplay() {
-    const display = document.querySelector('.display');
-    const spans = display.getElementsByTagName('span');
-    spans[0].innerText = convertToMalayalam(currentExpression) || '';
-    spans[1].innerText = convertToMalayalam(currentResult);
-}
+const c = s => String(s).replace(/[0-9]/g, d => m[d]);
+const u = () => { const s = document.querySelectorAll('.display span'); s[0].innerText = c(e) || ''; s[1].innerText = c(r); };
 
-// Number buttons
-function puj() { currentExpression += '0'; updateDisplay(); }
-function onn() { currentExpression += '1'; updateDisplay(); }
-function rnd() { currentExpression += '2'; updateDisplay(); }
-function mun() { currentExpression += '3'; updateDisplay(); }
-function nal() { currentExpression += '4'; updateDisplay(); }
-function anj() { currentExpression += '5'; updateDisplay(); }
-function arr() { currentExpression += '6'; updateDisplay(); }
-function ezh() { currentExpression += '7'; updateDisplay(); }
-function ett() { currentExpression += '8'; updateDisplay(); }
-function omb() { currentExpression += '9'; updateDisplay(); }
+function puj() { e += '0'; u(); }
+function onn() { e += '1'; u(); }
+function rnd() { e += '2'; u(); }
+function mun() { e += '3'; u(); }
+function nal() { e += '4'; u(); }
+function anj() { e += '5'; u(); }
+function arr() { e += '6'; u(); }
+function ezh() { e += '7'; u(); }
+function ett() { e += '8'; u(); }
+function omb() { e += '9'; u(); }
 
-// Operator buttons
-function add() { currentExpression += ' + '; updateDisplay(); }
-function sub() { currentExpression += ' − '; updateDisplay(); }
-function mul() { currentExpression += ' × '; updateDisplay(); }
-function div() { currentExpression += ' ÷ '; updateDisplay(); }
+function add() { e += ' + '; u(); }
+function sub() { e += ' − '; u(); }
+function mul() { e += ' × '; u(); }
+function div() { e += ' ÷ '; u(); }
 
-// Clear button
-function clr() {
-    currentExpression = '';
-    currentResult = '';
-    updateDisplay();
-}
+function clr() { e = ''; r = ''; u(); }
 
-// Equals button
 function sam() {
     try {
-        // Convert expression to evaluable format
-        let evalExpression = currentExpression
-            .replace(/÷/g, '/')
-            .replace(/×/g, '*')
-            .replace(/−/g, '-');
-        
-        let result = eval(evalExpression);
-        currentResult = Number.isFinite(result) ? result : '0 കൊണ്ട് ഹരിക്കാൻ പറ്റില്ല...';
-    } catch (e) {
-        currentResult = 'എന്തോ പിശക് പറ്റി';
-    }
-    updateDisplay();
+        let x = e.replace(/÷/g, '/').replace(/×/g, '*').replace(/−/g, '-');
+        let res = eval(x);
+        r = Number.isFinite(res) ? res : '0 ഹരിക്കാൻ പറ്റില്ല...';
+    } catch (err) { r = 'എന്തോ പിശക് പറ്റി'; }
+    u();
 }
 
-// Initialize display
-updateDisplay();
+document.addEventListener('keydown', function(ev) {
+    const k = ev.key;
+    if (k >= '0' && k <= '9') { e += k; u(); }
+    else if (k === '+') add();
+    else if (k === '-') sub();
+    else if (k === '*') mul();
+    else if (k === '/') div();
+    else if (k === 'Enter' || k === '=') sam();
+    else if (k === 'Escape' || k === 'c' || k === 'C') clr();
+    else if (k === 'Backspace') {
+        e = e.trimEnd();
+        if (e.endsWith(' +') || e.endsWith(' −') || e.endsWith(' ×') || e.endsWith(' ÷')) e = e.slice(0, -2).trimEnd();
+        else if (e.length > 0) e = e.slice(0, -1);
+        u();
+    }
+});
+
+u();
