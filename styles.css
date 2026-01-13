@@ -93,3 +93,15 @@ a {
   font-size: large;
   transition: all 0.3s ease;
 }
+
+.project-grid a{
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  border: dashed 1px #ffffff69;
+  padding:  3px 5px;
+}
+.project-grid a:hover{
+  opacity: 1;
+  /* text-decoration: underline dashed; */
+  border: solid 1px #ffffff69;
+}
